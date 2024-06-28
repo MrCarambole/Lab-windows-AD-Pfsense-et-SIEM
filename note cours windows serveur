@@ -1,0 +1,15 @@
+https://openclassrooms.com/fr/courses/2356306-prenez-en-main-windows-server/5832816-apprehendez-windows-server
+
+### Nomenclature
+
+Première version de windows serveur : windows NT
+puis Windows server 2003, 2008, 2012 etc...
+
+Plusieurs éditions de Win serv : 
+Essentials (jusqu'a 25 utilisateurs)
+Standard (pour les entreprises n'ayant pas de fort besoin en virtualisation)
+Datacenter (permet de crée autant de machines virtuelles que l'on souhaite)
+
+### Création de la vm
+iso : https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2019
+
