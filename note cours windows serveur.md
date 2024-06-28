@@ -25,7 +25,7 @@ iso : https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2019
 et ça reste très lent...
 
 ### Post installation
-Installation des mises à jour [OK]
+Installation des mises à jour [OK]\\
 Renommage de la machine [OK]
 
 
