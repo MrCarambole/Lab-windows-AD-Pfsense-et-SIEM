@@ -74,5 +74,30 @@ Ce configuration nous suffit pour l'instant, on rajoutera d'autre régles plus t
 
 Ainsi windows est dans le réseau interne et peu toujours avoir accès a internet car il utilise pfsense comme paserel qui laisse le flux aller jusqu'a ma livebox.
 
+## Mise en place des roles du serveur windows :
+Il existe tout un tas de role que peu avoir un serveur windows. Dans mon cas je veux que mon serveur est les roles suivant :
+- Un DHCP (les machines du réseau pourront automatiquement recevoir une ip de la part de ce serveur
+- Active directory (implémentation par microsoft des annuaire ldap permettant la gestion des identité et des droits d'accès)
+- Un serveur web iis (accesible depuis le WAN, il faudra donc configurer le pfsense pour le permettre)
+- Un service de stockage (également accesible depuis le WAN)
+
+### Mise en place du DHCP :
+Pour cela on rajout le role dhcp dans l'interface de gestion serveur.
+On crée une nouvelle étendu:
+- ip debut : 10.10.10.10
+- ip fin : 10.10.10.50
+- passerel : 10.10.10.1
+
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/dhcp.PNG">
+
+Je test avec une machine dans le réseau interne :
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/dhcp%202.PNG">
+
+et ça fonctionne !
 
 
+### Mise en place du serveur web :
+
+### Mise en place du service de stockage :
+
+### Mise en place du service de l'active directory :
