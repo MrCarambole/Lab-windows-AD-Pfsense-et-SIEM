@@ -1,0 +1,78 @@
+# Lab Windows serveur, Pare-feu Pfsense, IDS Snort et Siem Wazuh
+
+## Cours suivi lors de ce lab :
+#### Windows Serveur:
+https://openclassrooms.com/fr/courses/2356306-prenez-en-main-windows-server/5832816-apprehendez-windows-server
+
+#### Pfsense :
+https://www.youtube.com/watch?v=NzVDjNqchoc
+
+#### Snort :
+
+#### Wazuh :
+
+## Installation d'un serveur Windows
+### Nomenclature windows serveur
+
+Première version de windows serveur : windows NT
+
+puis Windows server 2003, 2008, 2012 etc...
+
+Plusieurs éditions de Win serv : 
+
+Essentials (jusqu'a 25 utilisateurs)
+
+Standard (pour les entreprises n'ayant pas de fort besoin en virtualisation)
+
+Datacenter (permet de crée autant de machines virtuelles que l'on souhaite)
+
+
+### Création de la vm
+
+iso : https://www.microsoft.com/fr-fr/evalcenter/download-windows-server-2019
+
+4096 de mémoire vive
+
+2 cpu
+
+et ça reste très lent...
+
+### Post installation
+Installation des mises à jour [OK]
+
+Renommage de la machine [OK]
+
+*Pour pouvoir continuer notre configuration de serveur windows on va devoir s'occuper du réseau, mais cela nécessite d'abord de mettre en place de le réseau interne via le parfeu.*
+
+## Installation et configuration de pfsense
+Pour l'installation de pfsense rien de très compliqué, il suffit de suivre le menu d'installation. J'ai cependant eu un problème car il avait inversé mes deux interface, il à donc fallut les changers.
+A savoir qu'un parfeu à deux interface : La WAN et la LAN
+La LAN c'est le réseau interne protégé par le parfeu et la WAN désigne le réseau extérieur.
+
+WAN -> em1 DHCPv4 192.168.1.42  (donner par ma box)
+LAN -> em0 10.10.10.1/24
+
+Lors de ma config pfsense je n'ai pas activé le DHCP car c'est l'AD qui aura ce role.
+
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/interface%20admin%20de%20pfsense.PNG">
+
+Pour utilisé l'interface web de configuration de pfsense je suis passé par une machine debian desktop.
+
+Voici les régles de base sur le parfeu :
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/config%20pfsense%201.PNG">
+
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/config%20pfsense%202.PNG">
+
+Autoriser toute communication initié par le LAN vers le WAN. Mais interdit toute connexion à l'origine du WAN vers le LAN.
+Ce configuration nous suffit pour l'instant, on rajoutera d'autre régles plus tard pour le SIEM.
+
+
+## Mettre le serveur windows dans le réseau interne
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/windows%20serveur%20config%20r%C3%A9seau.PNG">
+
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/config%20reseau%20windows.PNG">
+
+Ainsi windows est dans le réseau interne et peu toujours avoir accès a internet car il utilise pfsense comme paserel qui laisse le flux aller jusqu'a ma livebox.
+
+
+
