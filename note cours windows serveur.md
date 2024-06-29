@@ -35,3 +35,8 @@ J'ai installé la vm mais je peu pas continuer la partie configuration de résea
 
 https://openclassrooms.com/fr/courses/2356306-prenez-en-main-windows-server/5834891-preparez-votre-systeme-a-la-mise-en-reseau
 
+
+
+### Prenez en main les rôles et fonctionnalités
+
+
