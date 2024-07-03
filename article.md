@@ -95,8 +95,13 @@ Je test avec une machine dans le réseau interne :
 
 et ça fonctionne !
 
-
 ### Mise en place du serveur web :
+Pour installer le serveur IIS il faut juste rajouter le role au serveur windows.
+
+Afin de pouvoir acceder au site hébergé par IIS il faut effectuer un routage NAT de type port forwarding.
+
+Le routage NAT à pris une semaine à etre debugé... mais il fonctionne !
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/proof%20routage.PNG">
 
 ### Mise en place du service de stockage :
 
