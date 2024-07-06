@@ -111,6 +111,8 @@ Concernant le stockage le plus compliqué fut de crée un nouveau disque et de l
 
 Expliquer ce qu'est SMB
 
+### Installation du DNS :
+
 ### Mise en place du service de l'active directory :
 
 ## Utilisation de Snort dans pfsense
