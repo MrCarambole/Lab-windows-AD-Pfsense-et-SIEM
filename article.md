@@ -97,7 +97,7 @@ et ça fonctionne !
 
 ### Mise en place du serveur web :
 Pour installer le serveur IIS il faut juste rajouter le role au serveur windows. Jusque là rien de bien compliqué :
-
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/srv_iis.PNG">
 
 Afin de pouvoir acceder au site hébergé par IIS il faut effectuer un routage NAT de type port forwarding.
 
@@ -105,5 +105,10 @@ Le routage NAT à pris une semaine à etre debugé... mais il fonctionne ! (le p
 <img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/proof%20routage.PNG">
 
 ### Mise en place du service de stockage :
+Concernant le stockage le plus compliqué fut de crée un nouveau disque et de l'initialiser. J'ai également perdu beaucoup de temps car je n'avais pas activer une fonctionnalité nécessaire au partage, croyant que le service de fichier et de stockage était suffisant. Il faut enfaite rajouter la fonctionnalité : nom pour activer smb
+
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/partage.PNG">
+
+Expliquer ce qu'est SMB
 
 ### Mise en place du service de l'active directory :
