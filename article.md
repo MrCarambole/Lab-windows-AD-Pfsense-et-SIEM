@@ -112,3 +112,11 @@ Concernant le stockage le plus compliqué fut de crée un nouveau disque et de l
 Expliquer ce qu'est SMB
 
 ### Mise en place du service de l'active directory :
+
+## Utilisation de Snort dans pfsense
+
+## Installation du SIEM Wazuh
+
+## Installation des agents de Wazuh
+
+# Conclusion
