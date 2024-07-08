@@ -111,9 +111,13 @@ Concernant le stockage le plus compliqué fut de crée un nouveau disque et de l
 
 Expliquer ce qu'est SMB
 
-### Installation du DNS :
-
 ### Mise en place du service de l'active directory :
+
+J'ai rajouter le role AD DC à l'active directory. (expliquer)
+
+J'ai ajouter quelque UO (unité organisationel) et un utilisateurs. Le manque de ram de mon pc m'empêche d'intégrer un post client de l'AD mais la manipulation correspondante n'est pas très complexe.
+
+<img src="https://raw.githubusercontent.com/MrCarambole/Lab-windows-AD-Pfsense-et-SIEM/main/ad%20cp.PNG">
 
 ## Utilisation de Snort dans pfsense
 
