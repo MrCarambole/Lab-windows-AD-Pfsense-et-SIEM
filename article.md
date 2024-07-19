@@ -10,6 +10,8 @@ https://www.youtube.com/watch?v=NzVDjNqchoc
 #### Snort :
 
 #### Wazuh :
+https://medium.com/@DaoudaD/wazuh-partie1-pr%C3%A9sentation-mise-en-place-9eb28970ce31
+https://medium.com/@DaoudaD/wazuh-partie-2-2-fonctionnalit%C3%A9s-cl%C3%A9s-de-la-plateforme-af6a61d1e20a
 
 ## Installation d'un serveur Windows
 ### Nomenclature windows serveur
@@ -122,6 +124,17 @@ J'ai ajouter quelque UO (unité organisationel) et un utilisateurs. Le manque de
 ## Utilisation de Snort dans pfsense
 
 ## Installation du SIEM Wazuh
+Le SIEM (Security information and event management) permet de regrouper et de corréler les différents événements de sécurité sur un parc informatique. Il va par exemple récupérer via des agents installés sur celle-ci tous les logs des machines concernées. Wazuh est un SIEM gratuit est open source ce qui a motivé mon choix.
+
+Il est composé de trois partie :
+- Le serveur
+  C'est lui qui va rentrer en communication avec les agents pour leur configuration et pour récupérer les logs.
+
+- L'indexeur
+  Il stock les alerts reçu et les index pour faciliter leur consultation.
+
+- Le dashboard
+  C'est l'interface graphique que consulte l'utilisateur qui permet de visualiser les données.
 
 ## Installation des agents de Wazuh
 
